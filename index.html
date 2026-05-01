@@ -557,6 +557,44 @@
         .research-links a:hover {
             color: var(--accent-color);
         }
+
+        /* Consistency Section */
+        .consistency {
+            padding: 5rem 0;
+            background-color: rgba(18, 18, 18, 0.8);
+        }
+        
+        .consistency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .consistency-card {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .consistency-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .consistency-card img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .consistency-card h3 {
+            color: var(--text-color);
+            font-size: 1.2rem;
+        }
         
         /* Contact Section */
         .contact {
@@ -852,6 +890,8 @@
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#research">Research</a>
+                <a href="#beyond">Beyond Code</a>
+                <a href="#consistency">Consistency</a>
                 <a href="#contact">Contact</a>
             </nav>
             <div class="hamburger">
@@ -964,7 +1004,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Quiet Hours Scheduler</h3>
-                        <p class="project-description">Focus & Productivity Tool built with Java, Spring Boot, and React. Implemented scheduling algorithms to automatically allocate optimal quiet blocks based on user preferences. Added email notification feature to alert users of upcoming focus periods with cross-platform synchronization.</p>
+                        <p class="project-description">A Next.js web application for scheduling and managing quiet hours.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Java</span>
                             <span class="tech-tag">Spring Boot</span>
@@ -1043,6 +1083,29 @@
             </div>
         </div>
     </section>
+
+    <!-- Consistency Section -->
+    <section class="consistency" id="consistency">
+        <div class="container">
+            <div class="section-title">
+                <h2>Consistency</h2>
+            </div>
+            <div class="consistency-grid">
+                <div class="consistency-card">
+                    <img src="Assets/leetcodestats.png" alt="LeetCode Stats" />
+                    <h3>LeetCode</h3>
+                </div>
+                <div class="consistency-card">
+                    <img src="Assets/githubstats.png" alt="GitHub Contributions" />
+                    <h3>GitHub</h3>
+                </div>
+                <div class="consistency-card">
+                    <img src="Assets/monkeytypestats.png" alt="MonkeyType Stats" />
+                    <h3>MonkeyType</h3>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -1081,6 +1144,7 @@
                 <a href="#skills" class="footer-link">Skills</a>
                 <a href="#projects" class="footer-link">Projects</a>
                 <a href="#research" class="footer-link">Research</a>
+                <a href="#consistency" class="footer-link">Consistency</a>
                 <a href="#contact" class="footer-link">Contact</a>
             </div>
             <div class="social-links">
