@@ -497,6 +497,67 @@
             color: var(--accent-color);
         }
         
+        /* Research Section */
+        .research {
+            padding: 5rem 0;
+        }
+        
+        .research-grid {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .research-card {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .research-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+        }
+        
+        .research-description {
+            color: rgba(245, 245, 245, 0.7);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .research-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .research-date {
+            color: var(--accent-color);
+            font-size: 0.85rem;
+        }
+        
+        .research-links {
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        .research-links a {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .research-links a:hover {
+            color: var(--accent-color);
+        }
+        
         /* Contact Section */
         .contact {
             padding: 7rem 0;
@@ -790,6 +851,7 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
+                <a href="#research">Research</a>
                 <a href="#contact">Contact</a>
             </nav>
             <div class="hamburger">
@@ -958,6 +1020,30 @@
         </div>
     </section>
     
+    <!-- Research Section -->
+    <section class="research" id="research">
+        <div class="container">
+            <div class="section-title">
+                <h2>Research Paper</h2>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-content">
+                        <h3 class="research-title">Symptom2Care: A Big Data-Driven NLP Platform for Preventive Healthcare</h3>
+                        <p class="research-description"> Contributed to manuscript preparation, literature review, and technical writing.</p>
+                        <div class="research-meta">
+                            <span class="research-date">2024</span>
+                            <div class="research-links">
+                                <a href="https://drive.google.com/file/d/1LUVhhjV89T0xztHLpqGFuTADHVzp2Phz/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i></a>
+                                <a href="https://ieeexplore.ieee.org/document/11468987" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -994,6 +1080,7 @@
                 <a href="#about" class="footer-link">About</a>
                 <a href="#skills" class="footer-link">Skills</a>
                 <a href="#projects" class="footer-link">Projects</a>
+                <a href="#research" class="footer-link">Research</a>
                 <a href="#contact" class="footer-link">Contact</a>
             </div>
             <div class="social-links">
