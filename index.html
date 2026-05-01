@@ -323,36 +323,52 @@
         
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
         
         .skill-category {
-            background-color: var(--secondary-color);
-            border-radius: 10px;
+            background: linear-gradient(145deg, var(--secondary-color), rgba(30, 30, 30, 0.9));
+            border-radius: 12px;
             padding: 2rem;
             position: relative;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-top: 3px solid rgba(100, 255, 218, 0.3);
         }
         
         .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            border-top-color: var(--accent-color);
         }
         
         .skill-category i {
             color: var(--accent-color);
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.15), rgba(100, 255, 218, 0.05));
+            border-radius: 12px;
+            transition: all 0.4s ease;
+        }
+        
+        .skill-category:hover i {
+            transform: scale(1.15) rotate(5deg);
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.25), rgba(100, 255, 218, 0.1));
         }
         
         .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
             position: relative;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.8rem;
+            color: var(--text-color);
         }
         
         .skill-category h3::after {
@@ -362,7 +378,13 @@
             bottom: 0;
             width: 40px;
             height: 3px;
-            background-color: var(--accent-color);
+            background: linear-gradient(90deg, var(--accent-color), transparent);
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+        
+        .skill-category:hover h3::after {
+            width: 70px;
         }
         
         .skill-category ul {
@@ -370,9 +392,17 @@
         }
         
         .skill-category ul li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.7rem;
             position: relative;
             padding-left: 1.5rem;
+            transition: all 0.3s ease;
+            color: rgba(245, 245, 245, 0.75);
+            font-size: 0.95rem;
+        }
+        
+        .skill-category ul li:hover {
+            transform: translateX(8px);
+            color: var(--text-color);
         }
         
         .skill-category ul li::before {
@@ -380,18 +410,106 @@
             position: absolute;
             left: 0;
             color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-category ul li:hover::before {
+            transform: translateX(3px);
+        }
+        
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.2), transparent);
         }
         
         .skill-category::after {
             content: '';
             position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: rgba(100, 255, 218, 0.05);
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(100, 255, 218, 0.08), transparent);
             border-radius: 50%;
-            bottom: -50px;
-            right: -50px;
+            bottom: -60px;
+            right: -60px;
             z-index: 0;
+            transition: transform 0.4s ease;
+        }
+        
+        .skill-category:hover::after {
+            transform: scale(1.3);
+        }
+        
+        /* Experience Section */
+        .experience {
+            padding: 7rem 0;
+        }
+        
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .experience-card {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .experience-header h3 {
+            font-size: 1.3rem;
+            color: var(--text-color);
+        }
+        
+        .experience-date {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+        
+        .experience-company {
+            color: rgba(245, 245, 245, 0.7);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .experience-details {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .experience-details li {
+            color: rgba(245, 245, 245, 0.7);
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .experience-details li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
         }
         
         /* Projects Section */
@@ -888,6 +1006,7 @@
             <nav class="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#research">Research</a>
                 <a href="#consistency">Consistency</a>
@@ -975,6 +1094,41 @@
                     <ul>
                         <li>Git, GitHub, CI/CD</li>
                         <li>Vs code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience</h2>
+            </div>
+            <div class="experience-list">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Software Developer Intern</h3>
+                        <span class="experience-date">March 2025 – April 2025</span>
+                    </div>
+                    <p class="experience-company">Dezors · Remote</p>
+                    <ul class="experience-details">
+                        <li>Developed the frontend of the platform using Next.js, focusing on user interface and responsiveness.</li>
+                        <li>Implemented the Blog section, including layout, post display, and navigation features.</li>
+                        <li>Collaborated with design and development teams to ensure a smooth and intuitive user experience.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Software Testing & QA Intern</h3>
+                        <span class="experience-date">December 2025 – February 2026</span>
+                    </div>
+                    <p class="experience-company">Nothing Technologies Limited</p>
+                    <ul class="experience-details">
+                        <li>Conducted manual and automated testing using black-box, white-box, and grey-box techniques, improving test coverage by 25%.</li>
+                        <li>Managed test cases and defects with JIRA, streamlining tracking and reporting processes and reducing defect resolution time by 20%.</li>
+                        <li>Gained exposure to SDLC models (Waterfall, Agile, V-Model) and information security principles (CIA triad).</li>
                     </ul>
                 </div>
             </div>
@@ -1152,6 +1306,7 @@
                 <a href="#home" class="footer-link">Home</a>
                 <a href="#about" class="footer-link">About</a>
                 <a href="#skills" class="footer-link">Skills</a>
+                <a href="#experience" class="footer-link">Experience</a>
                 <a href="#projects" class="footer-link">Projects</a>
                 <a href="#research" class="footer-link">Research</a>
                 <a href="#consistency" class="footer-link">Consistency</a>
